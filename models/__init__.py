@@ -1,2 +1,2 @@
-from Answer import *
-from Question import *
+from .Answer import *
+from .Question import *
