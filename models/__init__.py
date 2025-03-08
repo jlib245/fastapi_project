@@ -1,2 +1,4 @@
-from .Answer import *
-from .Question import *
+from .answer import Answer
+from .question import Question
+
+__all__ = ["Answer", "Question"]
