@@ -7,8 +7,6 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 import site
 site_packages_dirs = site.getsitepackages()
 
-print(site_packages_dirs)
-exit()
 # site-packages 경로 선택 (첫 번째 경로 사용)
 site_packages_dir = site_packages_dirs[0]
 
