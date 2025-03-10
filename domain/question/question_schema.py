@@ -6,6 +6,6 @@ class Question(BaseModel):
     id: int
     subject: str | None = None
     content: str
-    create_time: datetime.datetime
+    create_date: datetime.datetime
     
     

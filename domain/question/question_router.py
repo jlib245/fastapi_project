@@ -5,6 +5,7 @@ from database import get_db
 from domain.question import question_schema, question_crud
 
 
+
 router = APIRouter(
     prefix="/api/question",
 )
