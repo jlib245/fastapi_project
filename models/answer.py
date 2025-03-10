@@ -1,4 +1,4 @@
-from common import *
+from .common import *
 class Answer(Base):
     __tablename__ = "answers"
     
