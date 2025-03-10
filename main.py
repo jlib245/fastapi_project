@@ -5,7 +5,24 @@ class ModelName(str, Enum):
     alexnet = "alexnet"
     resnet = "resnet"
     lenet = "lenet"
+from starlette.middleware.cors import CORSMiddleware
+
+from domain.question import question_router
+
 app = FastAPI()
+
+origins = [
+    "http://127.0.0.1:5173",    # 또는 "http://localhost:5173"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 
 
@@ -23,6 +40,18 @@ async def get_model(model_name: ModelName):
         return {"model_name": model_name, "message": "LeCNN all the images"}
 
     return {"model_name": model_name, "message": "Have some residuals"}
+
+
+app.include_router(question_router.router)
+
+
+
+
+
+
+
+
+
 
 @app.get("/")
 def hello():
