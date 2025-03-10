@@ -1,4 +1,3 @@
-import contextlib
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -13,7 +12,6 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine) # autocommit=False -> commit 사인 시점에만 저장
 Base = declarative_base()
 
-@contextlib.contextmanager
 def get_db():
     db = SessionLocal()
     try:
