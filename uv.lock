@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = ">=3.10"
 
 [[package]]
@@ -301,7 +302,7 @@ requires-dist = [
     { name = "mypy", specifier = ">=1.15.0" },
     { name = "nodejs", specifier = ">=0.1.1" },
     { name = "npm", specifier = ">=0.1.1" },
-    { name = "passlib", extras = ["bcrybt", "bcrypt"], specifier = ">=1.7.4" },
+    { name = "passlib", extras = ["bcrypt"], specifier = ">=1.7.4" },
     { name = "pydantic", extras = ["email"], specifier = ">=2.10.6" },
     { name = "python-jose", extras = ["cryptography"], specifier = ">=3.4.0" },
     { name = "python-multipart", specifier = ">=0.0.20" },

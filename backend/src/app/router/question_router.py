@@ -1,8 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
+from app.schema import question_schema
 from database import get_db
-from domain.question import question_schema, question_crud
+from app.crud import question_crud
 
 
 

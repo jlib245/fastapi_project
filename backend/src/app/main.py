@@ -7,8 +7,8 @@ class ModelName(str, Enum):
     lenet = "lenet"
 # from starlette.middleware.cors import CORSMiddleware
 from fastapi.middleware.cors import CORSMiddleware
-from domain.question import question_router
-from domain.user import user_router
+from app.router import question_router
+from app.router import user_router
 
 app = FastAPI()
 
@@ -71,7 +71,7 @@ async def read_user_me():
     return {"user_id": "the current user"}
 
 
-@app.get("/users/{user_id}")
+@app.get("/users/{user_Qid}")
 async def read_user(user_id: str):
     return {"user_id": user_id}
 
