@@ -7,8 +7,7 @@ class ModelName(str, Enum):
     lenet = "lenet"
 # from starlette.middleware.cors import CORSMiddleware
 from fastapi.middleware.cors import CORSMiddleware
-from app.router import question_router
-from app.router import user_router
+from .router import question_router, user_router
 
 app = FastAPI()
 

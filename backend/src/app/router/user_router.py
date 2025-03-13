@@ -6,10 +6,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from starlette import status
 
-from app.domain.crud import user_crud
-from database import get_db
-from app.domain.schema import user_schema
-from app.domain.crud.user_crud import pwd_context
+from ..crud import user_crud
+from ..database import get_db
+from ..schema import user_schema
+from ..crud.user_crud import pwd_context
 
 ACCESS_TOKEN_EXPIRE_MINUTES = 60*24
 ALGORITHM = "HS256"
