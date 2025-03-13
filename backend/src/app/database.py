@@ -1,15 +1,12 @@
 import os
-from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
-ROOT = Path(__file__).resolve().parents[3]
-DB_FILE = ROOT/os.environ.get("DATABASE_URL")
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = f"sqlite:///{DB_FILE}"
+SQLALCHEMY_DATABASE_URL = f"sqlite:///{os.environ.get('DATABASE_URL')}"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
