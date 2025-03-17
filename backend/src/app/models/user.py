@@ -1,4 +1,4 @@
-from .common import *
+from .common import Column, Integer, String, Base
 
 class User(Base):
     __tablename__ = "users" #관리되는 table 이름

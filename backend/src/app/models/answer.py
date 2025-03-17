@@ -1,4 +1,5 @@
-from .common import *
+from .common import Column, Integer, Text, DateTime, ForeignKey, relationship, Base
+
 class Answer(Base):
     __tablename__ = "answers"
     

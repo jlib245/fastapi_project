@@ -1,4 +1,4 @@
-from .common import *
+from .common import Column, Integer, String, Text, DateTime, Base
 
 class Question(Base):
     __tablename__ = "questions" #관리되는 table 이름
