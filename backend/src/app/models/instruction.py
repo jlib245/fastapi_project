@@ -1,4 +1,4 @@
-from common import Column, Integer, Float, String, JSON, Base, ForeignKey, relationship
+from .common import Column, Integer, Float, String, JSON, Base, ForeignKey, relationship
 class Instruction(Base):
     __tablename__ = "instructions"
     

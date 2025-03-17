@@ -1,4 +1,4 @@
-from common import Column, Integer, String, Base, ForeignKey, relationship
+from .common import Column, Integer, String, Base, ForeignKey, relationship
 
 class Waypoint(Base):
     __tablename__ = "waypoints"
