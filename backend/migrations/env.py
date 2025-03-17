@@ -7,7 +7,7 @@ from alembic import context
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
-from src.app import database # models.py 파일 import
+from src.app import models # models.py 파일 import
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -23,7 +23,7 @@ if config.config_file_name is not None:
 
 # target_metadata = mymodel.Base.metadata
 #target_metadata = None
-target_metadata = database.Base.metadata # models.py 파일의 Base.metadata를 target_metadata로 설정
+target_metadata = models.Base.metadata # models.py 파일의 Base.metadata를 target_metadata로 설정
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
